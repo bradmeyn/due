@@ -1,7 +1,8 @@
 <script>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
-import TaskList from "./components/TaskList.vue"; // Import the TaskList component
+import TaskList from "./components/TaskList.vue"; 
+import AddTask from './components/AddTask.vue';
 import { ref } from "vue";
 
 export default {
@@ -9,7 +10,8 @@ export default {
   components: {
     Header,
     Footer,
-    TaskList, // Register the TaskList component
+    TaskList,
+    AddTask
   },
   setup() {
     const tasks = ref([
@@ -37,6 +39,7 @@ export default {
       <h1>Tasks</h1>
 
       <TaskList :tasks="tasks" />
+      <AddTask/>
     </div>
   </main>
   <Footer />
